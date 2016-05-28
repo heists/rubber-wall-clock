@@ -1,0 +1,30 @@
+@mixin centered() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin clock($stroke-colour) {
+  stroke: $stroke-colour;
+
+  &__rim {
+    fill: transparent;
+  }
+
+  &__hand--hour {
+    animation: rotate-hand (60*60*12)+s infinite linear;
+  }
+  &__hand--minute {
+    animation: rotate-hand (60*60)+s infinite linear;
+  }
+  &__hand--seconds {
+    animation: rotate-hand 60s infinite linear;
+  }
+
+}
+
+@keyframes rotate-hand {
+  from { transform: rotateZ(0deg); }
+  to { transform: rotateZ(360deg); }
+}

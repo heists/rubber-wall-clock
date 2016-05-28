@@ -1,0 +1,77 @@
+$stroke-colour: #000;
+@import "scss/mixins";
+@import "scss/commands";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  position: relative;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+#container {
+  @include centered;
+  width: 100vmin;
+  height: 100vmin;
+}
+
+.svg {
+  overflow: visible;
+}
+
+.clock {
+  @include clock($stroke-colour);
+/*   &__rim { */
+  /* } */
+}
+
+.clock--glitch-cyan {
+  stroke: cyan;
+}
+.clock--glitch-red {
+  stroke: red;
+}
+
+.clock--glitch-clone {
+
+  &__hand {
+  }
+  &__rim {
+    /* stroke: red; */
+  }
+}
+
+.clock-glitch {
+    /* animation: glitch-skew 4s infinite linear; */
+}
+
+@keyframes glitch-skew {
+  0% { opacity: 0; }
+  2% { opacity: 1; }
+  50% { opacity: 1; }
+  52% { opacity: 0; }
+  53% { opacity: 1; }
+  57% { transform: skewY(0deg); }
+  58% { transform: skewY(-20deg); }
+  60% { opacity: 1; transform: skewY(-70deg); }
+  61% { opacity: 0; }
+  63% { opacity: 1; transform: skewY(0deg); }
+  71% { transform: scaleY(1) skewX(0deg); }
+  72% { transform: scaleY(1.2) skewX(-60deg); }
+  73% { transform: scaleY(1) skewY(0deg); }
+  80% { opacity: 1; }
+  81% { opacity: 0; }
+  82% { opacity: 1; }
+  85% { opacity: 1; }
+  91% { transform: scaleX(1) scaleY(1) skewX(0deg); }
+  92% { transform: scaleX(1.1) scaleY(.2) skewX(80deg); }
+  93% { transform: scaleX(1) scaleY(1) skewX(0deg) skewY(0deg); }
+}

@@ -1,0 +1,26 @@
+.command {
+  @include centered;
+  width: 40%;
+
+  input[type=text] {
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    outline: none;
+    border: none;
+    border-bottom: 10px solid yellow;
+    box-shadow: none;
+    color: yellow;
+    padding: 0 20px;
+    height: 2em;
+    font: bold 2em/2em sans-serif;
+  }
+
+  div {
+    width: 100%;
+    color: white;
+    background: red;
+    padding: 5px;
+    text-align: center;
+    font: normal 1em/1em sans-serif;
+  }
+}

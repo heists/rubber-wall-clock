@@ -1,2 +1,3 @@
-**MUJI's [rubber wall clock](http://www.muji.us/store/electronics-1/clocks/rubber-wall-clock.html) <3**
+![Rubber Wall Clock](/clock.gif?raw=true)
 
+**MUJI's [rubber wall clock](https://web.archive.org/web/20141103034511/http://www.muji.eu/pages/online.asp?Sec=6&Sub=28&PID=6434)**
